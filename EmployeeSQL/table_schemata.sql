@@ -43,10 +43,10 @@ CREATE TABLE dept_manager(
 DROP TABLE IF EXISTS dept_emp;
 --Create Table
 CREATE TABLE dept_emp(
-	dept_no VARCHAR NOT NULL,
-	FOREIGN KEY(dept_no) REFERENCES departments(dept_no),
 	emp_no INTEGER NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
+	dept_no VARCHAR NOT NULL,
+	FOREIGN KEY(dept_no) REFERENCES departments(dept_no),
 	PRIMARY KEY (dept_no, emp_no)
 );
 
